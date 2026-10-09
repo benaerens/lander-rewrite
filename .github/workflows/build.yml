@@ -1,0 +1,47 @@
+# Builds on every push and pull request. A tag v* (e.g. v0.1.0) also makes a GitHub release with the
+# Windows zip. No game files are involved: the tests here need none.
+name: build
+
+on:
+  push:
+    branches: [main]
+    tags: ['v*']
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: write   # the release on tags
+
+jobs:
+  linux:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: build (headless programs and tests)
+        run: make -j4
+      - name: scheduler self test
+        run: ./build/sched_test
+
+  windows:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: mlugg/setup-zig@v2
+        with:
+          version: 0.17.0
+      - name: build
+        shell: pwsh
+        run: ./build-windows.ps1
+      - name: package
+        shell: pwsh
+        run: ./tools/package-windows.ps1
+      - uses: actions/upload-artifact@v4
+        with:
+          name: lander-rewrite-windows-x64
+          path: build/lander-rewrite-windows-x64.zip
+      - name: release
+        if: startsWith(github.ref, 'refs/tags/v')
+        shell: pwsh
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh release create $env:GITHUB_REF_NAME build/lander-rewrite-windows-x64.zip --title "Lander rewrite $env:GITHUB_REF_NAME" --notes-file dist/RELEASE.md

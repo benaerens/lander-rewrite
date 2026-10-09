@@ -1,0 +1,27 @@
+build/
+*.png
+*.wav
+__pycache__/
+
+# never commit game files: disc images, a copied data folder, saves and settings
+data/
+cd/
+*.iso
+*.bin
+*.cue
+*.mds
+*.mdf
+*.img
+*.ccd
+*.sub
+*.zip
+*.ppm
+*.dat
+*.DAT
+*.dll
+*.DLL
+*.exe
+*.EXE
+*.mpg
+*.MPG
+LANDER.CFG

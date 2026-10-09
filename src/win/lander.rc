@@ -1,0 +1,2 @@
+// Windows resources of lander.exe: the program icon (drawn by tools/make_icon.py)
+1 ICON "lander.ico"

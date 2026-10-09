@@ -1,0 +1,44 @@
+LANDER REWRITE
+==============
+
+A remake of Psygnosis' Lander (1999). This download does not include the game:
+it plays from your own Lander CD, or an image of it.
+
+HOW TO START
+  1. Put your Lander disc image into the folder
+     "Put your Lander disc image here":
+       LANDER.cue + LANDER.bin   (with the music)
+       LANDER.mds + LANDER.mdf   (Alcohol 120%, with the music)
+       LANDER.iso                (no music: the soundtrack is CD audio,
+                                  which an .iso cannot hold)
+     If your image came in a .zip, unpack it first. Copying the files of the
+     Lander CD into that folder works too (without the music).
+  2. Double-click Lander.exe.
+
+  The first start copies the game files from the image to
+  %APPDATA%\LanderRewrite\data (about 680 MB, takes a minute). After that the
+  game starts right away, and you may delete the image if you like. A newer
+  version of this download finds those files again by itself.
+
+  Don't have an image? Make one from your CD with a CD imaging program, as
+  BIN/CUE so the music tracks are included.
+
+  Windows may say it protected your PC because the program is not signed:
+  click "More info", then "Run anyway".
+
+SETTINGS
+  Alt+Enter                full screen / window (--windowed starts in a window)
+  Options -> Controls      keyboard, mouse or joystick, and the key editor
+  --aspect 4:3             the original's shape in missions (the default is
+                           your monitor's shape; menus and films are always 4:3)
+  --render-height 960      sharper 3D (480 is the original's look)
+  --skip-intro             no intro films
+  (these go after the program in a shortcut's Target: ...\Lander.exe --skip-intro)
+
+  Saved games and settings: %APPDATA%\LanderRewrite
+  (SAVEGAME.DAT in the original's format, LANDER.CFG).
+  To remove everything: delete this folder and %APPDATA%\LanderRewrite.
+
+Lander is (c) 1999 Psygnosis Ltd, now part of Sony Interactive Entertainment.
+This project is not affiliated with or endorsed by them. It contains only new
+code (MIT license, see LICENSE.txt); see THIRD_PARTY_NOTICES.txt for pl_mpeg.

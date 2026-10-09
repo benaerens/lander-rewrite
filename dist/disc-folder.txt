@@ -1,0 +1,7 @@
+Put your Lander disc image in this folder, then start Lander.exe.
+
+  LANDER.cue + LANDER.bin   (with the music)
+  LANDER.mds + LANDER.mdf   (with the music)
+  LANDER.iso                (no music)
+
+Unpack a .zip first. The files of the Lander CD itself work too.
