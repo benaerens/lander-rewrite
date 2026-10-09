@@ -8,6 +8,10 @@ CD soundtrack. It runs on today's Windows, full screen, with widescreen missions
 **This download does not include the game.** You need your own Lander CD, or an image of it. The
 first time you start the game, it asks for your disc image and copies the game files from it.
 
+<img width="49%" height="49%" alt="Screenshot 2026-10-10 011323" src="https://github.com/user-attachments/assets/608cdf02-fc04-428f-bfa2-8c8d2442cb7f" />
+<img width="49%" height="49%" alt="Screenshot 2026-10-10 011514" src="https://github.com/user-attachments/assets/048b2992-eaeb-48a4-86bf-fa18bc6d91cb" />
+
+
 ## Playing (Windows)
 
 1. Download `lander-rewrite-windows-x64.zip` from [Releases](../../releases) and unzip it anywhere.
